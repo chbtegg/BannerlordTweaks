@@ -496,7 +496,7 @@ namespace BannerlordTweaks
         public int MaxChildren { get; set; } = 5;
         #endregion
 
-        #region Caravan Patches
+        #region Caravan Patches Tweaks
         [XmlElement]
         [SettingProperty("Enable Caravan Tweak", "Enables the tweaking of Caravans")]
         [SettingPropertyGroup("Caravan Tweaks", true)]
@@ -509,6 +509,36 @@ namespace BannerlordTweaks
         [SettingProperty("Player Caravan Party Size", 30, 100, "Native: 30")]
         [SettingPropertyGroup("Caravan Tweaks")]
         public int PlayerCaravanPartySize { get; set; } = 30;
+        #endregion
+
+        #region Age Patches Tweak
+        [XmlElement]
+        [SettingProperty("Enable Age Tweaks", "Enables the tweaking of character age behaviour")]
+        [SettingPropertyGroup("Age Tweaks", true)]
+        public bool DefaultAgeTweakEnabled { get; set; } = true;
+        [XmlElement]
+        [SettingProperty("Become Infant Age", 0, 125, "Native: 3")]
+        [SettingPropertyGroup("Age Tweaks")]
+        public int BecomeInfantAge { get; set; } = 3;
+        [XmlElement]
+        [SettingProperty("Become Child Age", 0, 125, "Native: 6")]
+        [SettingPropertyGroup("Age Tweaks")]
+        public int BecomeChildAge { get; set; } = 6;[XmlElement]
+        [SettingProperty("Become Teenager Age", 0, 125, "Native: 14")]
+        [SettingPropertyGroup("Age Tweaks")]
+        public int BecomeTeenagerAge { get; set; } = 14;
+        [XmlElement]
+        [SettingProperty("Child Age Becoming Hero", 0, 100, "Native: 18")]
+        [SettingPropertyGroup("Age Tweaks")]
+        public int HeroComesOfAge { get; set; } = 18;
+        [XmlElement]
+        [SettingProperty("Become Old Age", 0, 125, "Native: 47")]
+        [SettingPropertyGroup("Age Tweaks")]
+        public int BecomeOldAge { get; set; } = 47;
+        [XmlElement]
+        [SettingProperty("Max Age", 0, 125, "Native: 125")]
+        [SettingPropertyGroup("Age Tweaks")]
+        public int MaxAge { get; set; } = 125;
         #endregion
     }
 }

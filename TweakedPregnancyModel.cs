@@ -56,7 +56,7 @@ namespace BannerlordTweaks
 
             if (hero.Spouse != null && hero.IsFertile && IsHeroAgeSuitableForPregnancy(hero))
             {
-                ExplainedNumber bonuses = new ExplainedNumber(1f, (StringBuilder)null);
+                ExplainedNumber bonuses = new ExplainedNumber(1f, null);
                 PerkHelper.AddPerkBonusForCharacter(DefaultPerks.Medicine.PerfectHealth, hero.Clan.Leader.CharacterObject, ref bonuses);
                 num = (float)((6.5 - ((double)hero.Age - Settings.Instance.MinPregnancyAge) * 0.230000004172325) * 0.0199999995529652) * bonuses.ResultNumber;
             }
