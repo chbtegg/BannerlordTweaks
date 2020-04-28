@@ -49,7 +49,7 @@ namespace BannerlordTweaks
                 return num;
             }
 
-            if (Settings.Instance.MaxChildrenTweakEnabled && hero.Children != null && hero.Children.Any() && hero.Children.Count > Settings.Instance.MaxChildren)
+            if (Settings.Instance.MaxChildrenTweakEnabled && hero.Children != null && hero.Children.Any() && hero.Children.Count >= Settings.Instance.MaxChildren)
             {
                 return num;
             }
