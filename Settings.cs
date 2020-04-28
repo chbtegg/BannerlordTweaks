@@ -451,7 +451,7 @@ namespace BannerlordTweaks
         [SettingPropertyGroup("Pregnancy Tweaks")]
         public bool FemaleOffspringProbabilityTweakEnabled { get; set; } = false;
         [XmlElement]
-        [SettingProperty("Probability for female children", -1.0f, 1.0f, "Native value is 0.51. Set to -1 to disable female births")]
+        [SettingProperty("Probability for female children", 0.0f, 1.0f, "Native value is 0.51. Set to -1 to disable female births")]
         [SettingPropertyGroup("Pregnancy Tweaks")]
         public float FemaleOffspringProbability { get; set; } = 0.51f;
         [XmlElement]
@@ -459,7 +459,7 @@ namespace BannerlordTweaks
         [SettingPropertyGroup("Pregnancy Tweaks")]
         public bool TwinsProbabilityTweakEnabled { get; set; } = false;
         [XmlElement]
-        [SettingProperty("Probability to deliver twins", -1.0f, 1.0f, "Native value is 0.03. Determines the chance of giving birth to twins")]
+        [SettingProperty("Probability to deliver twins", 0.0f, 1.0f, "Native value is 0.03. Determines the chance of giving birth to twins")]
         [SettingPropertyGroup("Pregnancy Tweaks")]
         public float TwinsProbability { get; set; } = 0.03f;
         [XmlElement]
@@ -491,7 +491,7 @@ namespace BannerlordTweaks
         [SettingPropertyGroup("Pregnancy Tweaks")]
         public bool MaxChildrenTweakEnabled { get; set; } = false;
         [XmlElement]
-        [SettingProperty("Max Children", "Maximum number of children anyone can have. Default: 5")]
+        [SettingProperty("Max Children", 0, 999, "Maximum number of children anyone can have. Default: 5")]
         [SettingPropertyGroup("Pregnancy Tweaks")]
         public int MaxChildren { get; set; } = 5;
         #endregion
