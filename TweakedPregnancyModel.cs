@@ -78,15 +78,12 @@ namespace BannerlordTweaks
 
         private bool CheckIfHeroIsMainOrSpouseIsMarriedToPlayerHero(Hero hero)
         {
-            if (hero.CharacterObject != null && hero.CharacterObject.IsPlayerCharacter)
+            if (hero == Hero.MainHero)
                 return true;
 
-            if (hero.Spouse?.CharacterObject != null && hero.Spouse.CharacterObject.IsPlayerCharacter)
+            if (hero.Spouse == Hero.MainHero)
                 return true;
-
-            if (hero.Spouse?.Spouse?.CharacterObject != null && hero.Spouse.Spouse.CharacterObject.IsPlayerCharacter)
-                return true;
-
+            
             return false;
         }
     }
