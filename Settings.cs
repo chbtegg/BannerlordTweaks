@@ -425,9 +425,11 @@ namespace BannerlordTweaks
         [XmlElement]
         [SettingProperty("Focus Point Per Level", 1, 5, "Native value is 1. This is the amount of focus points earned per level.")]
         [SettingPropertyGroup("Attribute-Focus Points Tweaks")]
-        public int FocusPointsPerLevel { get; set; } = 1;
+        public int FocusPointsPerLevel { get; set; } = 1;
+
         #endregion
-		#region Pregnancy tweak
+
+        #region Pregnancy tweak
         [XmlElement]
         [SettingProperty("Enable No Stillbirths Tweak", "Disables stillbirths")]
         [SettingPropertyGroup("Pregnancy Tweaks")]
@@ -460,6 +462,38 @@ namespace BannerlordTweaks
         [SettingProperty("Probability to deliver twins", -1.0f, 1.0f, "Native value is 0.03. Determines the chance of giving birth to twins")]
         [SettingPropertyGroup("Pregnancy Tweaks")]
         public float TwinsProbability { get; set; } = 0.03f;
+        [XmlElement]
+        [SettingProperty("Enable Character Fertility Probability Tweak", "Allows for adjusting for the probability to get pregnant, this will apply to everyone. By enabling this, we can use Min/Max Pregnancy Age")]
+        [SettingPropertyGroup("Pregnancy Tweaks")]
+        public bool CharacterFertilityProbabilityTweakEnabled { get; set; } = false;
+        [XmlElement]
+        [SettingProperty("Character Fertility Probability", 0f, 1.0f, "Native value is 0.95. Determines the chance of getting pregnant")]
+        [SettingPropertyGroup("Pregnancy Tweaks")]
+        public float CharacterFertilityProbability { get; set; } = 0.95f;
+        [XmlElement]
+        [SettingProperty("Enable Daily Chance Pregnancy Tweak", "Enabling this will completely override the daily pregnancy check. All settings below will be applied!")]
+        [SettingPropertyGroup("Pregnancy Tweaks")]
+        public bool DailyChancePregnancyTweakEnabled { get; set; } = false;
+        [XmlElement]
+        [SettingProperty("Enable Player Character Fertility", "Is the player character (you) fertile? Native: true")]
+        [SettingPropertyGroup("Pregnancy Tweaks")]
+        public bool PlayerCharacterFertileEnabled { get; set; } = true;
+        [XmlElement]
+        [SettingProperty("Min Pregnancy Age", "Minimum Age the Hero can get pregnant. Native: 18")]
+        [SettingPropertyGroup("Pregnancy Tweaks")]
+        public int MinPregnancyAge { get; set; } = 18;
+        [XmlElement]
+        [SettingProperty("Max Pregnancy Age", "Maximum Age the Hero can get pregnant. Native: 45")]
+        [SettingPropertyGroup("Pregnancy Tweaks")]
+        public int MaxPregnancyAge { get; set; } = 45;
+        [XmlElement]
+        [SettingProperty("Enable Max Children Tweak", "Allows to set the maximum number of children that you can get")]
+        [SettingPropertyGroup("Pregnancy Tweaks")]
+        public bool MaxChildrenTweakEnabled { get; set; } = false;
+        [XmlElement]
+        [SettingProperty("Max Children", "Maximum number of children anyone can have. Default: 5")]
+        [SettingPropertyGroup("Pregnancy Tweaks")]
+        public int MaxChildren { get; set; } = 5;
         #endregion
     }
 }
