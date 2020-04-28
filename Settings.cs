@@ -479,13 +479,13 @@ namespace BannerlordTweaks
         [SettingPropertyGroup("Pregnancy Tweaks")]
         public bool PlayerCharacterFertileEnabled { get; set; } = true;
         [XmlElement]
-        [SettingProperty("Min Pregnancy Age", "Minimum Age the Hero can get pregnant. Native: 18")]
+        [SettingProperty("Min Pregnancy Age", 0, 999, "Minimum Age the Hero can get pregnant. Native: 18")]
         [SettingPropertyGroup("Pregnancy Tweaks")]
-        public int MinPregnancyAgeValue { get; set; } = 18;
+        public int MinPregnancyAge { get; set; } = 18;
         [XmlElement]
-        [SettingProperty("Max Pregnancy Age", "Maximum Age the Hero can get pregnant. Native: 45")]
+        [SettingProperty("Max Pregnancy Age", 0, 999, "Maximum Age the Hero can get pregnant. Native: 45")]
         [SettingPropertyGroup("Pregnancy Tweaks")]
-        public int MaxPregnancyAgeValue { get; set; } = 45;
+        public int MaxPregnancyAge { get; set; } = 45;
         [XmlElement]
         [SettingProperty("Enable Max Children Tweak", "Allows to set the maximum number of children that you can get")]
         [SettingPropertyGroup("Pregnancy Tweaks")]
