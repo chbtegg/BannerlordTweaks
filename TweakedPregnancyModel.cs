@@ -58,7 +58,7 @@ namespace BannerlordTweaks
             {
                 ExplainedNumber bonuses = new ExplainedNumber(1f, (StringBuilder)null);
                 PerkHelper.AddPerkBonusForCharacter(DefaultPerks.Medicine.PerfectHealth, hero.Clan.Leader.CharacterObject, ref bonuses);
-                num = (float)((6.5 - ((double)hero.Age - Settings.Instance.MinPregnancyAge) * 0.230000004172325) * 0.0199999995529652) * bonuses.ResultNumber;
+                num = (float)((6.5 - ((double)hero.Age - Settings.Instance.MinPregnancyAgeValue) * 0.230000004172325) * 0.0199999995529652) * bonuses.ResultNumber;
             }
 
             if (hero.Children == null || !hero.Children.Any())
@@ -71,8 +71,8 @@ namespace BannerlordTweaks
 
         private bool IsHeroAgeSuitableForPregnancy(Hero hero)
         {
-            if ((double)hero.Age >= Settings.Instance.MinPregnancyAge)
-                return (double)hero.Age <= Settings.Instance.MaxPregnancyAge;
+            if ((double)hero.Age >= Settings.Instance.MinPregnancyAgeValue)
+                return (double)hero.Age <= Settings.Instance.MaxPregnancyAgeValue;
             return false;
         }
 
